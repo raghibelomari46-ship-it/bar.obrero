@@ -1,0 +1,753 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Bar Obrero - Café & Grill en Pliego, Murcia. Carnes a la parrilla, pescados frescos y platos tradicionales españoles.">
+    <meta name="keywords" content="restaurante Pliego, bar Murcia, carnes parrilla, pescados frescos, cocina española, Bar Obrero">
+    <meta name="author" content="Bar Obrero">
+    
+    <!-- Open Graph / Social Media -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Bar Obrero - Café & Grill | Pliego, Murcia">
+    <meta property="og:description" content="Tradición y sabor en cada plato. Carnes a la parrilla, pescados frescos y cocina tradicional española.">
+    <meta property="og:url" content="https://bar-obrero.shop">
+    
+    <title>Bar Obrero - Café & Grill | Pliego, Murcia</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- Lucide Icons CDN -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav id="navbar">
+        <div class="nav-container">
+            <div class="nav-content">
+                <div class="nav-logo">
+                    <div class="logo-icon">
+                        <i data-lucide="chef-hat" style="width: 1.75rem; height: 1.75rem; color: #fafaf9;"></i>
+                        <div class="logo-badge"></div>
+                    </div>
+                    <div class="logo-text">
+                        <h1>Bar Obrero</h1>
+                        <p>Café & Grill</p>
+                    </div>
+                </div>
+                
+                <!-- Desktop Menu -->
+                <div class="nav-menu">
+                    <button class="nav-link active" onclick="scrollToSection('inicio')">Inicio</button>
+                    <button class="nav-link" onclick="scrollToSection('nosotros')">Nosotros</button>
+                    <button class="nav-link" onclick="scrollToSection('carta')">Carta</button>
+                    <button class="nav-link" onclick="scrollToSection('galeria')">Galería</button>
+                    <button class="nav-link" onclick="scrollToSection('contacto')">Contacto</button>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <button class="mobile-menu-button" onclick="toggleMobileMenu()">
+                    <i data-lucide="menu" id="menu-icon" style="width: 1.5rem; height: 1.5rem;"></i>
+                    <i data-lucide="x" id="close-icon" style="width: 1.5rem; height: 1.5rem; display: none;"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div class="mobile-menu" id="mobile-menu" style="display: none;">
+            <div class="mobile-menu-links">
+                <button class="mobile-menu-link" onclick="scrollToSection('inicio')">Inicio</button>
+                <button class="mobile-menu-link" onclick="scrollToSection('nosotros')">Nosotros</button>
+                <button class="mobile-menu-link" onclick="scrollToSection('carta')">Carta</button>
+                <button class="mobile-menu-link" onclick="scrollToSection('galeria')">Galería</button>
+                <button class="mobile-menu-link" onclick="scrollToSection('contacto')">Contacto</button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="inicio" class="hero-section">
+        <div class="hero-container">
+            <div class="hero-grid">
+                <div>
+                    <div class="hero-title-wrapper">
+                        <div class="hero-title-blur"></div>
+                        <h2 class="hero-title">Bar Obrero</h2>
+                    </div>
+                    <p class="hero-subtitle">Tradición y Sabor en Cada Plato</p>
+                    <p class="hero-description">
+                        Disfruta de auténticas carnes a la parrilla, pescados frescos y platos tradicionales en el corazón de Pliego, Murcia.
+                    </p>
+                    <div class="hero-buttons">
+                        <button class="btn-primary" onclick="scrollToSection('carta')">Ver Carta</button>
+                        <button class="btn-secondary" onclick="scrollToSection('contacto')">Contáctanos</button>
+                    </div>
+                </div>
+                <div class="stats-container">
+                    <div class="stats-background"></div>
+                    <div class="stats-card">
+                        <div class="stats-grid">
+                            <div class="stat-item">
+                                <i data-lucide="utensils-crossed" style="width: 3rem; height: 3rem; color: #f59e0b; margin: 0 auto 0.75rem;"></i>
+                                <p class="stat-number">25+</p>
+                                <p class="stat-label">Años de Experiencia</p>
+                            </div>
+                            <div class="stat-item">
+                                <i data-lucide="star" style="width: 3rem; height: 3rem; color: #f59e0b; margin: 0 auto 0.75rem;"></i>
+                                <p class="stat-number">4.4/5</p>
+                                <p class="stat-label">747 Reseñas</p>
+                            </div>
+                            <div class="stat-item full-width">
+                                <i data-lucide="clock" style="width: 3rem; height: 3rem; color: #f59e0b; margin: 0 auto 0.75rem;"></i>
+                                <p class="stat-number" style="font-size: 1.125rem;">Abierto Todos los Días</p>
+                                <p class="stat-label">06:00 - 00:00</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="nosotros" class="section about-section">
+        <div class="section-container">
+            <div class="section-header">
+                <h2 class="section-title">Nuestra Historia</h2>
+                <div class="section-divider"></div>
+            </div>
+            <div class="about-grid">
+                <div>
+                    <h3 class="about-title">Un Lugar de Encuentro en Pliego</h3>
+                    <p class="about-text">
+                        Bar Obrero es un referente gastronómico en Pliego, Murcia. Durante más de dos décadas, hemos servido a nuestra comunidad con pasión, dedicación y los mejores ingredientes.
+                    </p>
+                    <p class="about-text">
+                        Nuestra especialidad son las carnes a la parrilla cocinadas a la perfección, pescados frescos del Mediterráneo y platos tradicionales que celebran la rica herencia culinaria murciana.
+                    </p>
+                    <p class="about-text">
+                        Desde el desayuno hasta la cena, ofrecemos un ambiente acogedor donde familias, amigos y viajeros se reúnen para disfrutar de buena comida y mejor compañía.
+                    </p>
+                </div>
+                <div class="features-grid">
+                    <div class="feature-card primary">
+                        <i data-lucide="chef-hat" style="width: 4rem; height: 4rem; margin: 0 auto 1rem;"></i>
+                        <h4 class="feature-title">Carnes a la Parrilla</h4>
+                        <p class="feature-description">Cocinadas con maestría</p>
+                    </div>
+                    <div class="feature-card dark">
+                        <i data-lucide="utensils-crossed" style="width: 4rem; height: 4rem; margin: 0 auto 1rem;"></i>
+                        <h4 class="feature-title">Pescados Frescos</h4>
+                        <p class="feature-description">Del Mediterráneo</p>
+                    </div>
+                    <div class="feature-card gradient">
+                        <i data-lucide="star" style="width: 4rem; height: 4rem; margin: 0 auto 1rem;"></i>
+                        <h4 class="feature-title" style="font-size: 1.5rem;">Tradición y Calidad</h4>
+                        <p class="feature-description">En cada plato que servimos</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Menu Section -->
+    <section id="carta" class="section menu-section">
+        <div class="section-container">
+            <div class="section-header">
+                <h2 class="section-title section-title-light">Nuestra Carta</h2>
+                <div class="section-divider"></div>
+                <p class="section-subtitle section-subtitle-light">Sabores auténticos de la cocina murciana</p>
+            </div>
+
+            <div class="menu-grid">
+                <!-- Carnes a la Parrilla -->
+                <div class="menu-card">
+                    <h3 class="menu-card-title">Carnes a la Parrilla</h3>
+                    <div class="menu-items">
+                        <div class="menu-item">
+                            <span class="menu-item-name">Cordero</span>
+                            <span class="menu-item-price">12,00€</span>
+                        </div>
+                        <div class="menu-item">
+                            <span class="menu-item-name">Pollo</span>
+                            <span class="menu-item-price">6,50€</span>
+                        </div>
+                        <div class="menu-item">
+                            <span class="menu-item-name">Solomillo de cerdo</span>
+                            <span class="menu-item-price">12,00€</span>
+                        </div>
+                        <div class="menu-item">
+                            <span class="menu-item-name">Secreto ibérico de cerdo</span>
+                            <span class="menu-item-price">14,00€</span>
+                        </div>
+                        <div class="menu-item">
+                            <span class="menu-item-name">Secreto de angus</span>
+                            <span class="menu-item-price">18,00€</span>
+                        </div>
+                        <div class="menu-item">
+                            <span class="menu-item-name">Entrecot de ternera</span>
+                            <span class="menu-item-price">20,00€</span>
+                        </div>
+                        <div class="menu-item">
+                            <span class="menu-item-name">Presa ibérica</span>
+                            <span class="menu-item-price">16,00€</span>
+                        </div>
+                        <div class="menu-item">
+                            <span class="menu-item-name">Chuletón de vaca vieja</span>
+                            <span class="menu-item-price">40,00€</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Pescados -->
+                <div class="menu-card">
+                    <h3 class="menu-card-title">Pescados</h3>
+                    <div class="menu-items">
+                        <div class="menu-item">
+                            <span class="menu-item-name">Lubina</span>
+                            <span class="menu-item-price">12,00€</span>
+                        </div>
+                        <div class="menu-item">
+                            <span class="menu-item-name">Atún de ijada</span>
+                            <span class="menu-item-price">S/M</span>
+                        </div>
+                        <div class="menu-item">
+                            <span class="menu-item-name">Emperador</span>
+                            <span class="menu-item-price">10,00€</span>
+                        </div>
+                        <div class="menu-item">
+                            <span class="menu-item-name">Salmón</span>
+                            <span class="menu-item-price">9,50€</span>
+                        </div>
+                        <div class="menu-item">
+                            <span class="menu-item-name">Merluza</span>
+                            <span class="menu-item-price">8,50€</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Arroces -->
+                <div class="menu-card">
+                    <h3 class="menu-card-title">Arroces</h3>
+                    <div class="menu-items">
+                        <div class="menu-item">
+                            <span class="menu-item-name">Arroz de conejo/pollo</span>
+                            <span class="menu-item-price">8,00€</span>
+                        </div>
+                        <div class="menu-item">
+                            <span class="menu-item-name">Arroz de verduras</span>
+                            <span class="menu-item-price">7,50€</span>
+                        </div>
+                        <div class="menu-item">
+                            <span class="menu-item-name">Arroz costilleja ibérica</span>
+                            <span class="menu-item-price">7,50€</span>
+                        </div>
+                        <div class="menu-item">
+                            <span class="menu-item-name">Arroz de marisco</span>
+                            <span class="menu-item-price">12,00€</span>
+                        </div>
+                        <div class="menu-item">
+                            <span class="menu-item-name">Arroz de bogavante</span>
+                            <span class="menu-item-price">14,00€</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Ensaladas -->
+                <div class="menu-card">
+                    <h3 class="menu-card-title">Ensaladas</h3>
+                    <div class="menu-items">
+                        <div class="menu-item">
+                            <span class="menu-item-name">Ensalada kuki</span>
+                            <span class="menu-item-price">8,50€</span>
+                        </div>
+                        <div class="menu-item">
+                            <span class="menu-item-name">Ensalada de la casa</span>
+                            <span class="menu-item-price">8,50€</span>
+                        </div>
+                        <div class="menu-item">
+                            <span class="menu-item-name">Tomate y ventresca</span>
+                            <span class="menu-item-price">8,50€</span>
+                        </div>
+                        <div class="menu-item">
+                            <span class="menu-item-name">Tomate y olivas</span>
+                            <span class="menu-item-price">6,00€</span>
+                        </div>
+                        <div class="menu-item">
+                            <span class="menu-item-name">Tomate y tallos</span>
+                            <span class="menu-item-price">6,00€</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Platos de la Casa -->
+                <div class="menu-card">
+                    <h3 class="menu-card-title">Platos de la Casa</h3>
+                    <p class="menu-note">(Preguntar al camarero)</p>
+                    <div class="menu-items">
+                        <div class="menu-item">
+                            <span class="menu-item-name">Rabo de toro</span>
+                            <span class="menu-item-price">12,00€</span>
+                        </div>
+                        <div class="menu-item">
+                            <span class="menu-item-name">Carrillera en salsa</span>
+                            <span class="menu-item-price">9,00€</span>
+                        </div>
+                        <div class="menu-item">
+                            <span class="menu-item-name">Cochinillo (por encargo)</span>
+                            <span class="menu-item-price">16,00€</span>
+                        </div>
+                        <div class="menu-item">
+                            <span class="menu-item-name">Bacalao de la casa</span>
+                            <span class="menu-item-price">12,00€</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Postres -->
+                <div class="menu-card">
+                    <h3 class="menu-card-title">Postres</h3>
+                    <div class="menu-items">
+                        <div class="menu-item">
+                            <span class="menu-item-name">Tarta de la casa</span>
+                            <span class="menu-item-price">4,50€</span>
+                        </div>
+                        <div class="menu-item">
+                            <span class="menu-item-name">Tarta de calabaza</span>
+                            <span class="menu-item-price">5,50€</span>
+                        </div>
+                        <div class="menu-item">
+                            <span class="menu-item-name">Tarta asiática</span>
+                            <span class="menu-item-price">5,50€</span>
+                        </div>
+                        <div class="menu-item">
+                            <span class="menu-item-name">Tarta de turrón a la yema</span>
+                            <span class="menu-item-price">5,50€</span>
+                        </div>
+                        <div class="menu-item">
+                            <span class="menu-item-name">Tarta mousse de chocolate</span>
+                            <span class="menu-item-price">5,50€</span>
+                        </div>
+                        <div class="menu-item">
+                            <span class="menu-item-name">Tarta Kinder bueno</span>
+                            <span class="menu-item-price">5,50€</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="menu-footer">
+                <p>Los precios pueden variar según temporada y disponibilidad</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="galeria" class="section gallery-section">
+        <div class="section-container">
+            <div class="section-header">
+                <h2 class="section-title">Galería</h2>
+                <div class="section-divider"></div>
+                <p class="section-subtitle">Descubre nuestros platos</p>
+            </div>
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1541692641319-981cc79ee10a?w=800&h=600&fit=crop" 
+                         alt="Tapas Variadas" 
+                         class="gallery-image"
+                         loading="lazy">
+                    <div class="gallery-overlay"></div>
+                    <div class="gallery-content">
+                        <h3 class="gallery-title">Tapas Variadas</h3>
+                        <p class="gallery-description">Selección de tapas caseras</p>
+                    </div>
+                    <div class="gallery-icon">
+                        <i data-lucide="utensils-crossed" style="width: 1.5rem; height: 1.5rem; color: #fafaf9;"></i>
+                    </div>
+                </div>
+
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1534080564583-6be75777b70a?w=800&h=600&fit=crop" 
+                         alt="Paella Tradicional" 
+                         class="gallery-image"
+                         loading="lazy">
+                    <div class="gallery-overlay"></div>
+                    <div class="gallery-content">
+                        <h3 class="gallery-title">Paella Tradicional</h3>
+                        <p class="gallery-description">Arroz con sabor auténtico</p>
+                    </div>
+                    <div class="gallery-icon">
+                        <i data-lucide="utensils-crossed" style="width: 1.5rem; height: 1.5rem; color: #fafaf9;"></i>
+                    </div>
+                </div>
+
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1559847844-5315695dadae?w=800&h=600&fit=crop" 
+                         alt="Patatas Fritas" 
+                         class="gallery-image"
+                         loading="lazy">
+                    <div class="gallery-overlay"></div>
+                    <div class="gallery-content">
+                        <h3 class="gallery-title">Patatas Fritas</h3>
+                        <p class="gallery-description">Crujientes y caseras</p>
+                    </div>
+                    <div class="gallery-icon">
+                        <i data-lucide="utensils-crossed" style="width: 1.5rem; height: 1.5rem; color: #fafaf9;"></i>
+                    </div>
+                </div>
+
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1609501676725-7186f017a4b7?w=800&h=600&fit=crop" 
+                         alt="Pulpo a la Gallega" 
+                         class="gallery-image"
+                         loading="lazy">
+                    <div class="gallery-overlay"></div>
+                    <div class="gallery-content">
+                        <h3 class="gallery-title">Pulpo a la Gallega</h3>
+                        <p class="gallery-description">Tierno y sabroso</p>
+                    </div>
+                    <div class="gallery-icon">
+                        <i data-lucide="utensils-crossed" style="width: 1.5rem; height: 1.5rem; color: #fafaf9;"></i>
+                    </div>
+                </div>
+
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1515443961218-a51367888e4b?w=800&h=600&fit=crop" 
+                         alt="Croquetas Caseras" 
+                         class="gallery-image"
+                         loading="lazy">
+                    <div class="gallery-overlay"></div>
+                    <div class="gallery-content">
+                        <h3 class="gallery-title">Croquetas Caseras</h3>
+                        <p class="gallery-description">Receta tradicional</p>
+                    </div>
+                    <div class="gallery-icon">
+                        <i data-lucide="utensils-crossed" style="width: 1.5rem; height: 1.5rem; color: #fafaf9;"></i>
+                    </div>
+                </div>
+
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1601050690117-94f5f6fa8bd7?w=800&h=600&fit=crop" 
+                         alt="Tortilla de Patatas" 
+                         class="gallery-image"
+                         loading="lazy">
+                    <div class="gallery-overlay"></div>
+                    <div class="gallery-content">
+                        <h3 class="gallery-title">Tortilla de Patatas</h3>
+                        <p class="gallery-description">Jugosa y perfecta</p>
+                    </div>
+                    <div class="gallery-icon">
+                        <i data-lucide="utensils-crossed" style="width: 1.5rem; height: 1.5rem; color: #fafaf9;"></i>
+                    </div>
+                </div>
+
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1567337710282-00832b415979?w=800&h=600&fit=crop" 
+                         alt="Jamón Ibérico" 
+                         class="gallery-image"
+                         loading="lazy">
+                    <div class="gallery-overlay"></div>
+                    <div class="gallery-content">
+                        <h3 class="gallery-title">Jamón Ibérico</h3>
+                        <p class="gallery-description">Cortado a mano</p>
+                    </div>
+                    <div class="gallery-icon">
+                        <i data-lucide="utensils-crossed" style="width: 1.5rem; height: 1.5rem; color: #fafaf9;"></i>
+                    </div>
+                </div>
+
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1565299585323-38d6b0865b47?w=800&h=600&fit=crop" 
+                         alt="Calamares Fritos" 
+                         class="gallery-image"
+                         loading="lazy">
+                    <div class="gallery-overlay"></div>
+                    <div class="gallery-content">
+                        <h3 class="gallery-title">Calamares Fritos</h3>
+                        <p class="gallery-description">Crujientes y tiernos</p>
+                    </div>
+                    <div class="gallery-icon">
+                        <i data-lucide="utensils-crossed" style="width: 1.5rem; height: 1.5rem; color: #fafaf9;"></i>
+                    </div>
+                </div>
+
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1555939594-58d7cb561ad1?w=800&h=600&fit=crop" 
+                         alt="Ensaladas Frescas" 
+                         class="gallery-image"
+                         loading="lazy">
+                    <div class="gallery-overlay"></div>
+                    <div class="gallery-content">
+                        <h3 class="gallery-title">Ensaladas Frescas</h3>
+                        <p class="gallery-description">Ingredientes de temporada</p>
+                    </div>
+                    <div class="gallery-icon">
+                        <i data-lucide="utensils-crossed" style="width: 1.5rem; height: 1.5rem; color: #fafaf9;"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Reviews Section -->
+    <section class="section reviews-section">
+        <div class="section-container">
+            <div class="section-header">
+                <h2 class="section-title section-title-light">Lo Que Dicen Nuestros Clientes</h2>
+                <div class="section-divider"></div>
+                <div class="rating-display">
+                    <i data-lucide="star" style="width: 2rem; height: 2rem; color: #f59e0b; fill: #f59e0b;"></i>
+                    <i data-lucide="star" style="width: 2rem; height: 2rem; color: #f59e0b; fill: #f59e0b;"></i>
+                    <i data-lucide="star" style="width: 2rem; height: 2rem; color: #f59e0b; fill: #f59e0b;"></i>
+                    <i data-lucide="star" style="width: 2rem; height: 2rem; color: #f59e0b; fill: #f59e0b;"></i>
+                    <i data-lucide="star" style="width: 2rem; height: 2rem; color: #f59e0b; fill: #f59e0b; opacity: 0.5;"></i>
+                </div>
+                <p class="rating-number">4.4 / 5</p>
+                <p class="rating-count">Basado en 747 reseñas</p>
+            </div>
+            <div class="reviews-grid">
+                <div class="review-card">
+                    <div class="review-stars">
+                        <i data-lucide="star" style="width: 1.25rem; height: 1.25rem; color: #f59e0b; fill: #f59e0b;"></i>
+                        <i data-lucide="star" style="width: 1.25rem; height: 1.25rem; color: #f59e0b; fill: #f59e0b;"></i>
+                        <i data-lucide="star" style="width: 1.25rem; height: 1.25rem; color: #f59e0b; fill: #f59e0b;"></i>
+                        <i data-lucide="star" style="width: 1.25rem; height: 1.25rem; color: #f59e0b; fill: #f59e0b;"></i>
+                        <i data-lucide="star" style="width: 1.25rem; height: 1.25rem; color: #f59e0b; fill: #f59e0b;"></i>
+                    </div>
+                    <p class="review-comment">"Las carnes a la parrilla son espectaculares. El ambiente es muy acogedor y el servicio excelente."</p>
+                    <p class="review-author">— María G.</p>
+                </div>
+                <div class="review-card">
+                    <div class="review-stars">
+                        <i data-lucide="star" style="width: 1.25rem; height: 1.25rem; color: #f59e0b; fill: #f59e0b;"></i>
+                        <i data-lucide="star" style="width: 1.25rem; height: 1.25rem; color: #f59e0b; fill: #f59e0b;"></i>
+                        <i data-lucide="star" style="width: 1.25rem; height: 1.25rem; color: #f59e0b; fill: #f59e0b;"></i>
+                        <i data-lucide="star" style="width: 1.25rem; height: 1.25rem; color: #f59e0b; fill: #f59e0b;"></i>
+                        <i data-lucide="star" style="width: 1.25rem; height: 1.25rem; color: #57534e;"></i>
+                    </div>
+                    <p class="review-comment">"Calidad-precio inmejorable. Los arroces son auténticos y el personal muy atento."</p>
+                    <p class="review-author">— Carlos R.</p>
+                </div>
+                <div class="review-card">
+                    <div class="review-stars">
+                        <i data-lucide="star" style="width: 1.25rem; height: 1.25rem; color: #f59e0b; fill: #f59e0b;"></i>
+                        <i data-lucide="star" style="width: 1.25rem; height: 1.25rem; color: #f59e0b; fill: #f59e0b;"></i>
+                        <i data-lucide="star" style="width: 1.25rem; height: 1.25rem; color: #f59e0b; fill: #f59e0b;"></i>
+                        <i data-lucide="star" style="width: 1.25rem; height: 1.25rem; color: #f59e0b; fill: #f59e0b;"></i>
+                        <i data-lucide="star" style="width: 1.25rem; height: 1.25rem; color: #f59e0b; fill: #f59e0b;"></i>
+                    </div>
+                    <p class="review-comment">"Un lugar perfecto para reuniones familiares. La comida es deliciosa y las raciones generosas."</p>
+                    <p class="review-author">— Ana M.</p>
+                </div>
+            </div>
+            <div class="reviews-footer">
+                <p>Nos comprometemos a mejorar continuamente para brindar el mejor servicio a nuestros clientes.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contacto" class="section contact-section">
+        <div class="section-container">
+            <div class="section-header">
+                <h2 class="section-title">Visítanos</h2>
+                <div class="section-divider"></div>
+            </div>
+            <div class="contact-grid">
+                <!-- Contact Info -->
+                <div>
+                    <div class="contact-card">
+                        <h3 class="contact-card-title">Información de Contacto</h3>
+                        <div class="contact-items">
+                            <div class="contact-item">
+                                <div class="contact-icon">
+                                    <i data-lucide="map-pin" style="width: 1.5rem; height: 1.5rem; color: #b45309;"></i>
+                                </div>
+                                <div>
+                                    <p class="contact-label">Dirección</p>
+                                    <p class="contact-value">C. Cooperativa, 1</p>
+                                    <p class="contact-value">30176 Pliego, Murcia</p>
+                                </div>
+                            </div>
+                            <div class="contact-item">
+                                <div class="contact-icon">
+                                    <i data-lucide="phone" style="width: 1.5rem; height: 1.5rem; color: #b45309;"></i>
+                                </div>
+                                <div>
+                                    <p class="contact-label">Teléfono</p>
+                                    <a href="tel:+34680681530" class="contact-link">+34 680 68 15 30</a>
+                                </div>
+                            </div>
+                            <div class="contact-item">
+                                <div class="contact-icon">
+                                    <i data-lucide="clock" style="width: 1.5rem; height: 1.5rem; color: #b45309;"></i>
+                                </div>
+                                <div>
+                                    <p class="contact-label">Horario</p>
+                                    <p class="contact-value">Lunes - Domingo</p>
+                                    <p class="contact-value">06:00 - 00:00</p>
+                                </div>
+                            </div>
+                            <div class="contact-item">
+                                <div class="contact-icon">
+                                    <i data-lucide="mail" style="width: 1.5rem; height: 1.5rem; color: #b45309;"></i>
+                                </div>
+                                <div>
+                                    <p class="contact-label">Web</p>
+                                    <a href="https://bar-obrero.shop" class="contact-link" target="_blank" rel="noopener">bar-obrero.shop</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="services-card">
+                        <h3 class="contact-card-title">Servicios</h3>
+                        <ul class="services-list">
+                            <li class="service-item">
+                                <div class="service-bullet"></div>
+                                <span>Comida en el restaurante</span>
+                            </li>
+                            <li class="service-item">
+                                <div class="service-bullet"></div>
+                                <span>Para llevar</span>
+                            </li>
+                            <li class="service-item">
+                                <div class="service-bullet"></div>
+                                <span>Eventos y celebraciones</span>
+                            </li>
+                            <li class="service-item">
+                                <div class="service-bullet"></div>
+                                <span>Grupos grandes bienvenidos</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Map -->
+                <div>
+                    <div class="map-container">
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3133.8!2d-1.4903!3d38.2242!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd647f7d8c8a8a8b%3A0x8a8a8a8a8a8a8a8a!2sC.%20Cooperativa%2C%201%2C%2030176%20Pliego%2C%20Murcia!5e0!3m2!1sen!2ses!4v1234567890"
+                            class="map-iframe"
+                            allowfullscreen
+                            loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade"
+                            title="Bar Obrero Location">
+                        </iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-grid">
+                <div>
+                    <h3 class="footer-title">Bar Obrero</h3>
+                    <p class="footer-text">
+                        Tradición culinaria en el corazón de Pliego, Murcia. Carnes a la parrilla, pescados frescos y platos tradicionales desde hace más de 25 años.
+                    </p>
+                </div>
+                <div>
+                    <h3 class="footer-title">Horario</h3>
+                    <p class="footer-text">Todos los días</p>
+                    <p class="footer-text">06:00 - 00:00</p>
+                </div>
+                <div>
+                    <h3 class="footer-title">Contacto</h3>
+                    <p class="footer-text">C. Cooperativa, 1</p>
+                    <p class="footer-text">30176 Pliego, Murcia</p>
+                    <p class="footer-text">+34 680 68 15 30</p>
+                </div>
+            </div>
+            <div class="footer-divider">
+                <p>&copy; 2026 Bar Obrero. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+        // Initialize Lucide icons
+        lucide.createIcons();
+
+        // Mobile menu toggle
+        function toggleMobileMenu() {
+            const mobileMenu = document.getElementById('mobile-menu');
+            const menuIcon = document.getElementById('menu-icon');
+            const closeIcon = document.getElementById('close-icon');
+            
+            if (mobileMenu.style.display === 'none' || mobileMenu.style.display === '') {
+                mobileMenu.style.display = 'block';
+                menuIcon.style.display = 'none';
+                closeIcon.style.display = 'block';
+            } else {
+                mobileMenu.style.display = 'none';
+                menuIcon.style.display = 'block';
+                closeIcon.style.display = 'none';
+            }
+            
+            // Re-initialize icons after DOM change
+            lucide.createIcons();
+        }
+
+        // Smooth scroll to section
+        function scrollToSection(sectionId) {
+            const section = document.getElementById(sectionId);
+            const mobileMenu = document.getElementById('mobile-menu');
+            const menuIcon = document.getElementById('menu-icon');
+            const closeIcon = document.getElementById('close-icon');
+            
+            if (section) {
+                section.scrollIntoView({ behavior: 'smooth' });
+                
+                // Update active nav link
+                document.querySelectorAll('.nav-link').forEach(link => {
+                    link.classList.remove('active');
+                });
+                event.target.classList.add('active');
+                
+                // Close mobile menu
+                if (mobileMenu.style.display === 'block') {
+                    mobileMenu.style.display = 'none';
+                    menuIcon.style.display = 'block';
+                    closeIcon.style.display = 'none';
+                    lucide.createIcons();
+                }
+            }
+        }
+
+        // Update active nav link on scroll
+        window.addEventListener('scroll', function() {
+            const sections = ['inicio', 'nosotros', 'carta', 'galeria', 'contacto'];
+            let current = '';
+
+            sections.forEach(sectionId => {
+                const section = document.getElementById(sectionId);
+                if (section) {
+                    const sectionTop = section.offsetTop;
+                    const sectionHeight = section.clientHeight;
+                    if (window.pageYOffset >= sectionTop - 100) {
+                        current = sectionId;
+                    }
+                }
+            });
+
+            document.querySelectorAll('.nav-link').forEach(link => {
+                link.classList.remove('active');
+                if (link.textContent.toLowerCase() === current || 
+                    (current === 'nosotros' && link.textContent === 'Nosotros') ||
+                    (current === 'carta' && link.textContent === 'Carta') ||
+                    (current === 'galeria' && link.textContent === 'Galería')) {
+                    link.classList.add('active');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
